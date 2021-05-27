@@ -8,6 +8,7 @@ import pkg from "../package.json";
 import datosRoutes from "./routes/datos.routes";
 import usersRoutes from "./routes/user.routes";
 import authRoutes from "./routes/auth.routes";
+import filesRoutes from "./routes/files.routes";
 
 import { createRoles, createAdmin} from "./libs/initialSetup";
 
@@ -45,5 +46,6 @@ app.get("/", (req, res) => {
 app.use("/api/datos", datosRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/files", filesRoutes);
 
 export default app;

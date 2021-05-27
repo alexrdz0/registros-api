@@ -7,7 +7,7 @@ router.post('/', [authJwt.verifyToken, authJwt.isSuperuser], datoController.crea
 router.get('/', datoController.getDatos);
 router.get('/:datoId', [authJwt.verifyToken], datoController.getDatoByID);
 router.put('/:datoId', [authJwt.verifyToken], datoController.updateDatoById);
-router.get('/search', datoController.getDatoByNuc);
+router.get('/search/:nuc',[authJwt.verifyToken], datoController.getDatoByNuc);
 
 
 

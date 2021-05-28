@@ -22,10 +22,10 @@ app.set("port", process.env.PORT || 4000);
 app.set("json spaces", 4);
 
 // Middlewares
-const corsOptions = {
+/*const corsOptions = {
   origin: "http://localhost:4000",
-};
-app.use(cors(corsOptions));
+};*/
+app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
